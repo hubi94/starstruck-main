@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Starstruck patterns</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul id="topnav" class="topnav" class="container" >
+					<li class="logo"><a href="#top" style="font-family:magicClub">&lt;Starstruck&gt;</a></li>
+					<li><a href="#tips">Articles</a></li>
+					<li><a href="#shop">Products</a></li>
+					<li><a href="#contact">Log In</a></li>
+					<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+					<li class="hamburger"><a href="javascript: void(0);"><i class="fa fa-bars"></i></a></li>
+				</ul>
+			</nav>
+
+		<!-- Welcome -->
+			<article id="top" class="wrapper style1">
+				<div class="container" id="bg-text">
+					<div class="row">
+						<div class="col-4 col-5-large col-12-medium">
+							<span class="image fit"><img src="images/embroideryHeader.jpeg" alt="embroidering hand" /></span>
+						</div>
+						<div class="col-8 col-7-large col-12-medium">
+							<header>
+								<h1>Hi. We're <span style="font-family:magicClub"><strong>&lt;</strong>Starstruck<strong>&gt;</strong></span></h1>
+							</header>
+							<p>Welcome to our playground, a place where embroidery lovers can browse our embroidery patterns!</p>
+							<a href="#author" class="button large scrolly">Click here to get to know our author!</a>
+						</div>
+					</div>
+				</div>
+			</article>
+
+		<!-- Work -->
+			<article id="tips" class="wrapper style2">
+				<div class="container">
+					<header>
+						<h2><span style="font-family:magicClub">&lt;</span> Latest tricks and techniques! <span style="font-family:magicClub">&gt;</span></h2>
+						<p>That may interest you...</p>
+					</header>
+					<div id="carousel" class="row aln-center">
+		
+					</div>
+					<footer>
+						<p>Want to see what we got in store for you?</p>
+						<a href="#shop" class="button large scrolly">See our shop!</a>
+					</footer>
+				</div>
+			</article>
+
+		<!-- Portfolio -->
+			<article id="shop" class="wrapper style3">
+				<div class="container">
+					<header>
+						<h2><span style="font-family:magicClub">&lt;</span> Here’s some stuff we made recently <span style="font-family:magicClub">&gt;</span></h2>
+						<p></p>
+					</header>
+					<div id="products" class="row product-grid">
+					</div>
+					<footer>
+						<a href="#contact" class="button large scrolly">More patterns</a>
+					</footer>
+				</div>
+			</article>
+
+
+		<!-- Author -->
+			<article id="author" class="wrapper style1">
+				<div class="container">
+					<div class="row">
+						<div class="col-4 col-5-large col-12-medium">
+							<span class="image fit"><img src="images/AnjaHubac.jpg" alt="picture of Anja Hubac" /></span>
+						</div>
+						<div class="col-8 col-7-large col-12-medium">
+							<header>
+								<h2>About author</h2>
+							</header>
+							<p>My name is Anja Hubač, I'm 27 years old and I'm currently studying Web development at ICT College.<br/>
+								I'm currently working on some freelance projects alongside my fellow colleagues from College. I'm interested in both frontend and backend. I have a little bit of Vue, React, Node.js and Laravel knowledge.<br/>
+								My previous work experiences include working as a promoter and a lifeguard.<br/>
+								I aspire to be great developer, best co-worker and inspiring human being.
+							</p>
+						</div>
+					</div>
+				</div>
+			</article>
+
+			
+
+		<!-- Form -->
+			 <article id="contact" class="wrapper style4">
+				<div class="container medium">
+					<header>
+					</header>
+
+					<div class="form">
+					
+						<h1>Access your account</h1>
+
+						<ul class="tab-group">
+							<li class="tab active"><a href="#signup">Sign Up</a></li>
+							<li class="tab"><a href="#login">Log In</a></li>
+						</ul>
+					
+						<div class="tab-content">
+							<div id="signup">
+					
+								<form onsubmit="return false">
+					
+									<div class="top-row">
+										<div class="field-wrap">
+											<label>
+												First Name<span class="req">*</span>
+											</label>
+											<input type="text" id="name" required autocomplete="off" />
+											<span class="error name-err"></span>
+										</div>
+					
+										<div class="field-wrap">
+											<label>
+												Last Name<span class="req">*</span>
+											</label>
+											<input type="text" id="surname" required autocomplete="off" />
+											<span class="error surname-err"></span>
+										</div>
+									</div>
+					
+									<div class="field-wrap">
+										<label>
+											Email Address<span class="req">*</span>
+										</label>
+										<input type="email" id="emailSU" required autocomplete="off" />
+										<span class="error emailSU-err"></span>
+									</div>
+					
+									<div class="field-wrap">
+										<label>
+											Set A Password<span class="req">*</span>
+										</label>
+										<input type="password" id="passSU" required autocomplete="off" />
+										<span class="error passSU-err"></span>
+									</div>
+
+									<div class="field-wrap">
+										<label>
+											Confirm Password<span class="req">*</span>
+										</label>
+										<input type="password" id="passConf" required autocomplete="off" />
+										<span class="error passConf-err"></span>
+									</div>
+
+									<div class="form-btn-wrap">
+					
+										<button type="submit" id="btnSU" class="button button-block">Sign Up</button>
+
+									</div>
+					
+								</form>
+					
+							</div>
+					
+							<div id="login" style="display: none;">
+					
+								<form onsubmit="return false">
+					
+									<div class="field-wrap">
+										<label>
+											Email Address<span class="req">*</span>
+										</label>
+										<input type="email" id="emailLog" required autocomplete="off" />
+										<span class="error emailLog-err"></span>
+									</div>
+					
+									<div class="field-wrap">
+										<label>
+											Password<span class="req">*</span>
+										</label>
+										<input type="password" id="passLog" required autocomplete="off" />
+										<span class="error passLog-err"></span>
+									</div>
+
+									<div class="form-btn-wrap">
+										<button type="submit" id="btnLog" class="button button-block">Log In</button>
+									</div>
+
+								</form>
+					
+							</div>
+					
+						</div><!-- tab-content -->
+					
+					</div> 
+						<div class="col-12">
+							<hr />
+							<h3>Our social networks and documentation</h3>
+							<ul class="social">
+								<li><a href="https://www.facebook.com/HubiTheBubi" class="icon brands fa-facebook-f" title="Facebook"><span class="label">Facebook</span></a></li>
+								<li><a href="https://www.linkedin.com/in/anja-hubac/" class="icon brands fa-linkedin-in" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
+								<li><a href="#" class="fas fa-sitemap" title="Sitemap"></a></li>
+								<li><a href="#" class="fas fa-file-code" title="Documentation"></a></li>
+							</ul>
+							<hr />
+						</div>
+					</div>
+					<footer>
+						<ul id="copyright">
+							<li>&copy; Anja Hubač. All rights reserved.</li>
+						</ul>
+					</footer>
+				</div>
+			</article>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script type="text/javascript" src="assets/js/main.js"></script>
+			<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	</body>
+</html>
