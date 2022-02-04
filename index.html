@@ -16,7 +16,7 @@
 					<li><a href="#tips">Articles</a></li>
 					<li><a href="#shop">Products</a></li>
 					<li><a href="#contact">Log In</a></li>
-					<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+					<li><a href="#" id="cartLogoBtn"><i class="fa fa-shopping-cart"></i><span class='badge badge-warning' id='lblCartCount'></span></a></li>
 					<li class="hamburger"><a href="javascript: void(0);"><i class="fa fa-bars"></i></a></li>
 				</ul>
 			</nav>
@@ -54,20 +54,26 @@
 						<a href="#shop" class="button large scrolly">See our shop!</a>
 					</footer>
 				</div>
+
 			</article>
 
-		<!-- Portfolio -->
+		<!-- Products -->
 			<article id="shop" class="wrapper style3">
 				<div class="container">
 					<header>
 						<h2><span style="font-family:magicClub">&lt;</span> Here’s some stuff we made recently <span style="font-family:magicClub">&gt;</span></h2>
-						<p></p>
+						<div id="sortList">
+							<label for="sort">Sort products by: </label>
+							<select id="sort" name="sortby">
+								<option value="az">A-Z</option>
+								<option value="za">Z-A</option>
+								<option value="priceup">Price Up</option>
+								<option value="pricedown">Price Down</option>
+							</select>
+						</div>
 					</header>
 					<div id="products" class="row product-grid">
 					</div>
-					<footer>
-						<a href="#contact" class="button large scrolly">More patterns</a>
-					</footer>
 				</div>
 			</article>
 
@@ -198,17 +204,16 @@
 						</div><!-- tab-content -->
 					
 					</div> 
-						<div class="col-12">
-							<hr />
-							<h3>Our social networks and documentation</h3>
-							<ul class="social">
-								<li><a href="https://www.facebook.com/HubiTheBubi" class="icon brands fa-facebook-f" title="Facebook"><span class="label">Facebook</span></a></li>
-								<li><a href="https://www.linkedin.com/in/anja-hubac/" class="icon brands fa-linkedin-in" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
-								<li><a href="#" class="fas fa-sitemap" title="Sitemap"></a></li>
-								<li><a href="#" class="fas fa-file-code" title="Documentation"></a></li>
-							</ul>
-							<hr />
-						</div>
+					<div class="col-12">
+						<hr />
+						<h3>Our social networks and documentation</h3>
+						<ul class="social">
+							<li><a href="https://www.facebook.com/HubiTheBubi" class="icon brands fa-facebook-f" title="Facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="https://www.linkedin.com/in/anja-hubac/" class="icon brands fa-linkedin-in" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
+							<li><a href="sitemap.xml" class="fas fa-sitemap" title="Sitemap"></a></li>
+							<li><a href="#" class="fas fa-file-code" title="Documentation"></a></li>
+						</ul>
+						<hr />
 					</div>
 					<footer>
 						<ul id="copyright">

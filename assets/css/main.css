@@ -1635,6 +1635,20 @@ form ::-moz-focus-inner {
   border: 0;
 }
 
+#sortList {
+  text-align: right;
+  color: #656565;
+  font-weight: 700;
+  padding: 2em 2em 0 0;
+}
+
+#sort {
+  text-align: center;
+  margin-left: 1em;
+  width: 10%;
+  font-weight: 300;
+}
+
 /* Input error class */
 
 .field-wrap {
@@ -1642,7 +1656,7 @@ form ::-moz-focus-inner {
 }
 
 .field-wrap span {
-  color: #860e0e;
+  color: #656565;
 }
 
 .err {
@@ -1808,6 +1822,7 @@ button,
   box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5),
     inset 0px 2px 1px 0px rgba(255, 255, 255, 0.75);
   background-color: #9653c2;
+  opacity: 0.8;
   padding: 1em 2.35em 1em 2.35em;
   font-size: 1.1em;
   max-width: 24em;
@@ -1818,7 +1833,8 @@ input[type="submit"]:hover,
 input[type="reset"]:hover,
 button:hover,
 .button:hover {
-  background-color: #a85adb;
+  background-color: #9653c2;
+  opacity: 0.6;
   color: #fff !important;
 }
 
@@ -2232,6 +2248,26 @@ ul.actions li:first-child {
   border-left: solid 0.75em transparent;
   border-right: solid 0.75em transparent;
   border-top: solid 0.6em #282828;
+}
+
+#lblCartCount {
+    font-size: 12px;
+    background: #9653c2;
+    color: #fff;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-left: -10px;
+}
+.badge {
+  padding-left: 9px;
+  padding-right: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+}
+.label-warning[href],
+.badge-warning[href] {
+  background-color: #c67605;
 }
 
 /* Articles */

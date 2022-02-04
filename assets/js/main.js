@@ -11,13 +11,6 @@ $(document).ready(function () {
     small: [null, "736px"],
   });
 
-  // Play initial animations on page load.
-  $window.on("load", function () {
-    window.setTimeout(function () {
-      $body.removeClass("is-preload");
-    }, 100);
-  });
-
   // Scrolly.
   $("#nav a, .scrolly").scrolly({
     speed: 1000,
@@ -38,6 +31,8 @@ $(document).ready(function () {
   }
 
   document.querySelector(".hamburger").addEventListener("click", hamburger);
+
+  $("#lblCartCount").hide();
 
   /*----- Articles -----*/
 
@@ -276,24 +271,14 @@ $(document).ready(function () {
       },
     },
   ];
+ 
+  showProducts(products);
 
-  let product = "";
-  products.forEach((p) => {
-    product += `<div class="col-4 col-6-medium col-12-small product-item">
-							<article class="box style2">
-								<div class="image featured">
-									<img src="images/${p.img.src}.jpg" alt="${p.img.alt}" />
-								</div>
-								<h3>${p.name}</h3>
-								<p class="price">${p.price} &euro;</p>
-								<p class="collection"><span>${p.theme}</span></p>
-								<button class="btn btn-secondary add-to-cart" title="Quick Shop">
-									<i class="fas fa-cart-arrow-down"></i>
-								</button>
-							</article>
-						</div>`;
-  });
-  document.getElementById("products").innerHTML = product;
+  $('#sort').on('change', function() {
+    let sortedProducts = sorting(products);
+    showProducts(sortedProducts);
+ })
+
 
   /*----- SIGN UP/LOG IN FORM ------*/
 
@@ -391,11 +376,10 @@ $(document).ready(function () {
         }
 
         if (
-          passSU.value !== passConfirm.value &&
-          !!passwordRegEx.test(passConfirm.value)
+          passSU.value !== passConfirm.value || passSU.value == "" 
         ) {
           $(passConfirm).addClass("err");
-          passConfirmErr.innerHTML = "First letter must be capitalized";
+          passConfirmErr.innerHTML = "Passwords do not match";
           console.log("regex fail");
           errors.push(passConfirm.value);
         } else {
@@ -460,4 +444,49 @@ $(document).ready(function () {
 
     $(target).fadeIn(600);
   });
-});
+
+}) ;
+
+function showProducts(products){
+  let product = "";
+  products.forEach((p) => {
+    product += `<div class="col-4 col-6-medium col-12-small product-item">
+							<article class="box style2">
+								<div class="image featured">
+									<img src="images/${p.img.src}.jpg" alt="${p.img.alt}" />
+								</div>
+								<h3>${p.name}</h3>
+								<p class="price">${p.price} &euro;</p>
+								<p class="collection"><span>${p.theme}</span></p>
+								<button class="btn btn-secondary add-to-cart" onclick="cartCounter()" title="Quick Shop">
+									<i class="fas fa-cart-arrow-down"></i>
+								</button>
+							</article>
+						</div>`;
+  });
+  document.getElementById("products").innerHTML = product;
+}
+
+function sorting(products){
+    var sortType = $("#sort").val();
+    console.log(sortType);
+    if(sortType == "az"){
+    return products.sort((a,b) => a.name > b.name ? 1 : -1);
+    }
+    else if(sortType == "za"){
+    return products.sort((a,b) => a.name < b.name ? 1 : -1);
+    }
+    else if(sortType == "priceup"){
+    return products.sort((a,b) => a.price > b.price ? 1 : -1);
+    }
+    else if(sortType == "pricedown"){
+    return products.sort((a,b) => a.price < b.price ? 1 : -1);
+    }
+  }
+  
+  let counter = 1;
+  
+  function cartCounter(){
+    document.getElementById("lblCartCount").innerHTML = counter++;
+    $("#lblCartCount").show();
+  }
